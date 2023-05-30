@@ -85,5 +85,112 @@ body {
     background: var(--white);
     font-size: 1.6rem;
     padding-block-start: 90px;
-    height: 300vh;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+   background: hsl(0, 0%, 95%); 
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(0, 0%, 80%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(0, 0%, 60%);
+}
+
+/*Reused Style*/
+
+.container {
+    padding-inline: 15px ;
+}
+
+/* Header */
+
+.overlay {display:none;}
+
+.header {
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: var(--transition-1);
+    z-index: 4;
+}
+
+.header.active {
+    box-shadow: 0 2px 10px hsla(0, 0%, 0%, 0.1);
+}
+
+.header, .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px33;
+}
+
+.nav-open-btn {
+    font-size: 30px;
+    background: var(--bittersweet);
+    color: var(--white);
+    padding: 8px;
+}
+
+.nav-open-btn:is(:hover, :focus) {
+    background-color: var(--salmon);
+}
+
+.nav-open-btn ion-icon {
+    --ionicon-stroke-width: 40px;
+}
+
+.navbar {
+    background: var(--white);
+    position: fixed;
+    top: 0;
+    left: -280px;
+    width: 100%;
+    max-width: 270px;
+    height: 100%;
+    border-right:  3px solid var(--rich-black-fogra-29);
+    font-family: var(--ff-roboto);
+    overflow: auto;
+    overscroll-behavior: contain;
+    z-index: 2;
+    visibility: hidden;
+    transition: 0.25s var(--cubic-out);
+}
+
+.navbar.active {
+    visibility: visible;
+    transform: translateX(280px);
+    transition: 0.5s var(--cubic-in);
+}
+
+.nav-close-btn {
+    color: var(--rich-black-fogra-29);
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 13px;
+    font-size: 25px;
+    transition: var(--transition-1);
+}
+
+.nav-close-btn ion-icon {
+    --ionicon-stroke-width: 55px;
+}
+
+.nav-close-btn:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.nav-bar .logo {
+    background-color: var(--maximum-blue-green_10);
+    padding-block: 50px 40px;
 }
