@@ -194,3 +194,68 @@ body {
     background-color: var(--maximum-blue-green_10);
     padding-block: 50px 40px;
 }
+
+.nav-bar .logo img {
+    margin-inline: auto;
+}
+
+.navbar-list, .nav-action-list {
+    margin: 30px;
+}
+
+.navbar-list {
+    padding: 20px;
+    border-bottom: 1px solid var(--gainsboro);
+}
+
+.navbar-link {
+    color: var(--rich-black-fogra-29);
+    padding-block: 10px;
+    transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.navbar-item:not(:last-child) {
+    border-bottom: 1px solid var(--gainsboro);
+}
+
+.nav-action-list > li:first-child { display: none;}
+
+.nav-action-btn {
+    color: var(--rich-black-fogra-29);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    padding-block: 10px;
+    transition: var(--transition-1);
+}
+
+.nav-action-btn:is(:hover, :focus) {
+    color: var(--bittersweet);
+}
+
+.nav-action-btn ion-icon {
+    font-size: 22px;
+    --ionicon-stroke-width: 25px;
+}
+
+.nav-action-text strong {
+    font-weight: initial;
+    color: var(--bittersweet);
+}
+
+.nav-action-badge {
+    margin-left: auto;
+    font-size: var(--fs-8);
+    background: var(--bittersweet);
+    color: var(--white);
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
