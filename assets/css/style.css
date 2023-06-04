@@ -141,7 +141,7 @@ body {
 
 .btn {
     background: var(--background, var(--bittersweet));
-    color: var(--coloer, var(--white));
+    color: var(--color, var(--white));
     font-size: var(--fs-5);
     display: flex;
     align-items: center;
@@ -153,6 +153,16 @@ body {
 .btn-primary:is(:hover, :focus) {
     --background: var(--salmon);
     --border-color: var(--salmon);
+}
+
+.btn-secondary {
+    --background: transparent;
+    --border-color: var(--black);
+    --color: var(--black);
+}
+
+.btn-secondary:is(:hover, :focus) {
+    --background: hsla(0,, 0%, 0%, 0.1);
 }
 
 /* Header */
@@ -348,4 +358,18 @@ body {
     line-height: 1.8;
     max-width: 46ch;
     margin-bottom: 25px;
+}
+
+/* Collection */
+
+.collection-card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 45px 25px;
 }
