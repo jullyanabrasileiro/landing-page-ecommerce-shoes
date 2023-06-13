@@ -334,6 +334,24 @@ body {
     font-weight: var(--fw-300);
 }
 
+.btn-link {
+    position: relative;
+    --background: none;
+    --border-color: none;
+    padding: 0;
+    margin-inline: auto;
+    max-width: max-content;
+    font-family: var(--ff-roboto);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-500);
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--white);
+}
+
+.btn-link:is(:hover, :focus) {
+    border-color: transparent;
+}
+
 
 /* Header */
 
